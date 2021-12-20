@@ -1,5 +1,7 @@
 <?php 
 
+// Creare un array con 15 numeri casuali, tenendo conto che l’array non dovrà contenere lo stesso numero più di una volta
+
 function getRandomNumbers($min, $max, $nItems){
 
    $numArray = [];
@@ -28,8 +30,6 @@ function getRandomNumbers($min, $max, $nItems){
 }
 
 var_dump(getRandomNumbers(0,15,15));
-
-
 
 ?>
 
