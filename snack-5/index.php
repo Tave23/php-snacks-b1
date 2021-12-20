@@ -6,9 +6,13 @@ $mainParag = 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maiores 
 
 echo $mainParag . "<hr>";
 
-print_r (explode(".",$mainParag));
+$dividedParag = explode(".",$mainParag, -1);
 
-var_dump((explode(".",$mainParag)));
+var_dump($dividedParag);
+
+for ($i=0; $i < count($dividedParag); $i++) { 
+   echo $dividedParag[$i] . "<br>";
+}
 
 ?>
 

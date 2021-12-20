@@ -46,12 +46,12 @@ foreach(array_keys($posts) as $singlePost){
    for ($i=0; $i < count($posts[$singlePost]); $i++){
       
       $singlePostArray = $posts[$singlePost][$i];
-      echo "<br> {$singlePost} => <br> ";
+      echo "<br> {$singlePost} : <br> ";
 
       foreach(array_keys($singlePostArray) as $keyArray){
 
-      echo " <li> {$keyArray} => {$singlePostArray[$keyArray]} </li> ";
-     }
+         echo " <li> {$keyArray} ----> {$singlePostArray[$keyArray]} </li> ";
+      }
    }
 
    echo "<hr>";
@@ -69,6 +69,11 @@ foreach(array_keys($posts) as $singlePost){
 </head>
 <body>
 
+<style>
+   li{
+      background-color: green;
+   }
+</style>
 
 </body>
 </html>
