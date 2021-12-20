@@ -1,7 +1,8 @@
 <?php
 
-$posts = [
+// Creare un array di array. Ogni array figlio avrà come chiave una data in questo formato: DD-MM-YYYY es 01-01-2007 e come valore un array di post associati a quella data. Stampare ogni data con i relativi post.
 
+$posts = [
     '10/01/2019' => [
         [
             'title' => 'Post 1',
@@ -39,6 +40,23 @@ $posts = [
         ]
     ],
 ];
+
+foreach(array_keys($posts) as $singlePost){
+
+   for ($i=0; $i < count($posts[$singlePost]); $i++){
+      
+      $singlePostArray = $posts[$singlePost][$i];
+      echo "<br> {$singlePost} => <br> ";
+
+      foreach(array_keys($singlePostArray) as $keyArray){
+
+      echo " <li> {$keyArray} => {$singlePostArray[$keyArray]} </li> ";
+     }
+   }
+
+   echo "<hr>";
+ };
+
 ?>
 
 <!DOCTYPE html>
@@ -50,6 +68,7 @@ $posts = [
    <title>Snack 3</title>
 </head>
 <body>
-   Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore corporis illum delectus deleniti officiis eum expedita ipsa iusto eligendi ducimus dolor molestias commodi repudiandae optio, amet necessitatibus? A est quae sit numquam voluptas repellendus, illo ab esse earum quos et suscipit iste nobis corrupti voluptates dolorem veritatis consequuntur obcaecati accusantium voluptatum illum voluptate nisi aperiam. Id ex, at odit consectetur quibusdam consequatur dicta quod necessitatibus veritatis ipsam minus dolores quis, laudantium fugit est quasi vero molestiae corrupti! Veritatis, sunt! Voluptas hic aspernatur optio et, molestiae voluptate laboriosam maiores! Quasi ratione consequuntur atque aliquam voluptates magnam beatae qui debitis dolorum commodi.
+
+
 </body>
 </html>

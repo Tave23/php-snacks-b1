@@ -10,8 +10,6 @@ print_r (explode(".",$mainParag));
 
 var_dump((explode(".",$mainParag)));
 
-
-
 ?>
 
 <!DOCTYPE html>
